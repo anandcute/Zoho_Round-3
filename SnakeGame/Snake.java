@@ -81,6 +81,7 @@ public class Snake {
                 if (direction == 'L') {
                     snakeMove(row, --col);
                 }
+                s.close();
             }
         } else {
             System.out.println("Invalid move");

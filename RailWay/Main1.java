@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class Main1 {
 
     // function for booking ticket
     public static void bookTicket(Passenger p) {

@@ -115,7 +115,7 @@ public class TicketBooker {
             }
             //now we have a passenger from RAC to whom we can book a ticket ,
             //so book the cancelled ticket to the RAC Passenger
-            Main.bookTicket(passengerFromRAC); // conform ticket la iruthu cancel panitu poitaga la so rac la iruthu conform ticket move pani aganum.
+            Main1.bookTicket(passengerFromRAC); // conform ticket la iruthu cancel panitu poitaga la so rac la iruthu conform ticket move pani aganum.
 
          } 
     }
