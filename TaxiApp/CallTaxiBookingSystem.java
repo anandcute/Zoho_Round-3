@@ -1,4 +1,4 @@
-package TaxiApp;
+// package TaxiApp;
 
 import java.util.*;
 
@@ -64,6 +64,10 @@ public class CallTaxiBookingSystem {
         // Calculate drop time (15 mins per point)
         int travelTime = Math.abs(getPointIndex(destination) - getPointIndex(start)) * 15; // in minutes
         String endTime = calculateEndTime(startTime, travelTime);
+
+        allocatedTaxi.currentLocation = destination; // Update taxi's location
+        Trip trip = new Trip(customerId, start, destination, startTime, endTime, fare);
+        allocatedTaxi.addTrip(trip);
 
         // Print the booking confirmation
         System.out.println("Booking ID: " + bookingIdCounter++);
@@ -215,6 +219,7 @@ public class CallTaxiBookingSystem {
                     break;
                 case 3:
                     System.out.println("Exiting the system...");
+                    scanner.close();
                     return;
                 default:
                     System.out.println("Invalid choice. Please try again.");
